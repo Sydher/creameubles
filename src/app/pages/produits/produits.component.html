@@ -1,61 +1,76 @@
-<section class="section is-wood">
-    <div class="container">
-        <h1 class="title">Nos produits et services</h1>
-        <div class="tile is-ancestor">
-            <div class="tile is-parent">
-                <article class="tile is-child notification is-orange">
-                    <div class="content">
-                        <p class="title">Meubles</p>
-                        <p class="subtitle">
-                            Exclusivement en bois massif <i>(chêne, merisier, pin, hévéa, teck, aulne)</i>.<br>
-                            La plupart de nos meubles sont BRUTS, ce qui vous permet de choisir la finition et la teinte que nous savons adapter précisément aux meubles déjà présents chez vous
-                            (laquée, cérusée, etc.)
-                        </p>
-                        <figure class="image is-4by3">
-                            <img src="https://bulma.io/images/placeholders/640x480.png">
-                        </figure>
-                    </div>
-                </article>
-            </div>
-            <div class="tile is-vertical is-8">
-                <div class="tile">
-                    <div class="tile is-parent is-vertical">
-                        <article class="tile is-child notification is-light">
-                            <p class="title">Literie</p>
+<section class="hero is-wood is-fullheight-with-navbar">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">
+                Nos produits et services
+            </h1>
+            <div class="tile is-ancestor">
+                <div class="tile is-parent">
+                    <article class="tile is-child notification is-orange">
+                        <div class="content">
+                            <p class="title">Meubles</p>
                             <p class="subtitle">
-                                Partenaire depuis 2010 de BULTEX et MERINOS, vous trouverez toute la gamme allant du matelas
-                                d'appoint jusqu'à la plus haute technologie en matière de relaxation.
+                                Exclusivement en bois massif <i>(chêne, merisier, pin, hévéa, teck, aulne)</i>.<br>
+                                La plupart de nos meubles sont BRUTS, ce qui vous permet de choisir la finition et la teinte que nous savons adapter précisément aux meubles déjà présents chez vous
+                                (laquée, cérusée, etc.)
                             </p>
-                        </article>
-                        <article class="tile is-child notification is-warning">
-                            <p class="title">Salon</p>
-                            <p class="subtitle">
-                                Très large gamme de salons tissus et cuirs (fixe, angle, panoramique, convertible et relaxation)
-                                de fabrication francaise et européenne.
-                            </p>
-                        </article>
+                            <figure class="image is-3by2 is-clickable" (click)="toggleModal()">
+                                <img src="../../../assets/produits.jpg" alt="Produits">
+                            </figure>
+                        </div>
+                    </article>
+                </div>
+                <div class="tile is-vertical is-8">
+                    <div class="tile">
+                        <div class="tile is-parent is-vertical">
+                            <article class="tile is-child notification is-light">
+                                <p class="title">Literie</p>
+                                <p class="subtitle">
+                                    Partenaire depuis 2010 de BULTEX et MERINOS, vous trouverez toute la gamme allant du matelas
+                                    d'appoint jusqu'à la plus haute technologie en matière de relaxation.
+                                </p>
+                            </article>
+                            <article class="tile is-child notification is-warning">
+                                <p class="title">Salon</p>
+                                <p class="subtitle">
+                                    Très large gamme de salons tissus et cuirs (fixe, angle, panoramique, convertible et relaxation)
+                                    de fabrication francaise et européenne.
+                                </p>
+                            </article>
+                        </div>
+                        <div class="tile is-parent">
+                            <article class="tile is-child notification is-info">
+                                <p class="title">Cuisine</p>
+                                <p class="subtitle">
+                                    Pièce essentielle de la maison, nous vous assurons un service de conseil complet,
+                                    du dessin au crayon à vos côtés, en passant par la prise de côte chez vous,
+                                    la conception par ordinateur en 3D, jusqu’à la pose par nos soins avec formation à l’utilisation.
+                                </p>
+                            </article>
+                        </div>
                     </div>
                     <div class="tile is-parent">
-                        <article class="tile is-child notification is-info">
-                            <p class="title">Cuisine</p>
+                        <article class="tile is-child notification is-dark">
+                            <p class="title">Sur-mesure</p>
                             <p class="subtitle">
-                                Pièce essentielle de la maison, nous vous assurons un service de conseil complet,
-                                du dessin au crayon à vos côtés, en passant par la prise de côte chez vous,
-                                la conception par ordinateur en 3D, jusqu’à la pose par nos soins avec formation à l’utilisation.
+                                Nous sommes à même de dessiner, concevoir et faire réaliser des meubles sur-mesure répondant
+                                parfaitement à vos besoins.
                             </p>
                         </article>
                     </div>
-                </div>
-                <div class="tile is-parent">
-                    <article class="tile is-child notification is-dark">
-                        <p class="title">Sur-mesure</p>
-                        <p class="subtitle">
-                            Nous sommes à même de dessiner, concevoir et faire réaliser des meubles sur-mesure répondant
-                            parfaitement à vos besoins.
-                        </p>
-                    </article>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<!-- Modal -->
+<div class="modal" #modalImg>
+    <div class="modal-background"></div>
+    <div class="modal-content">
+        <p class="image is-4by3">
+            <img src="../../../assets/produits.jpg" alt="Produits">
+        </p>
+    </div>
+    <button class="modal-close is-large" aria-label="close" (click)="toggleModal()"></button>
+</div>

@@ -10,7 +10,8 @@ const routes: Routes = [
     { path: '', component: AccueilComponent },
     { path: 'notre-magasin', component: MagasinComponent },
     { path: 'nos-produits', component: ProduitsComponent },
-    { path: 'nous-contacter', component: ContactComponent }
+    { path: 'nous-contacter', component: ContactComponent },
+    { path: '**', component: AccueilComponent }
 ];
 
 @NgModule({

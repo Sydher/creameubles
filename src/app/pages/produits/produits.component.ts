@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
     selector: 'app-produits',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProduitsComponent implements OnInit {
 
+    @ViewChild('modalImg', {static: true}) modalImg: ElementRef;
+
     constructor() { }
 
     ngOnInit() {
+    }
+
+    toggleModal() {
+        this.modalImg.nativeElement.classList.toggle('is-active');
     }
 
 }

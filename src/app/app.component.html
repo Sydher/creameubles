@@ -40,7 +40,7 @@
         </div>
 
         <div class="navbar-end">
-            <a class="navbar-item">
+            <a class="navbar-item" (click)="toggleModal()">
                 Plan d'accès
             </a>
             <a class="navbar-item" [routerLink]="['/nous-contacter']">
@@ -52,3 +52,17 @@
 
 <!-- Contenu de la page -->
 <router-outlet></router-outlet>
+
+<!-- Modal -->
+<div class="modal" #modalPlan>
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Chemin de Mézard, Route de Castres, 81000 Albi</p>
+            <button class="delete" aria-label="close" (click)="toggleModal()"></button>
+        </header>
+        <section class="modal-card-body">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2874.416853970149!2d2.139369414977538!3d43.9093430791134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12addd5ecc5f2e99%3A0x271d0c676e380f1f!2sCr%C3%A9a+Meubles+Albi!5e0!3m2!1sfr!2sfr!4v1564760981174!5m2!1sfr!2sfr" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </section>
+    </div>
+</div>
