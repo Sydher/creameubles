@@ -1,6 +1,6 @@
 {
-  "name": "angular-project",
-  "version": "0.0.0",
+  "name": "creameubles",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
